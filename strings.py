@@ -79,3 +79,29 @@ str6 = "Hello world"
 print(str6.istitle())
 print(str6.swapcase())
 print(str6.title())
+
+# f-string
+letter = "My name is {} and country is {}"
+country = 'India'
+name = 'Mohit'
+
+print(letter.format(name, country))
+print(letter.format(country, name))
+
+letter = "My name is {0} and country is {1}"
+print(letter.format(name, country))
+letter = "My name is {1} and country is {0}"
+print(letter.format(country, name))
+
+print(f"My name is {name} and country is {country}")
+print("price is {price:.2f}".format(price=45.6666))
+print(f"{2+6}")
+
+# docstring
+def add(a, b):
+    '''function is to add two numbers'''
+    print(a+b)
+
+# when you hover over a add function, it will show docstring
+add(3,6)
+print(add.__doc__)
