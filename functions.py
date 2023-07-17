@@ -42,3 +42,13 @@ def add1(a, b):
     return 5
 
 print(add1(3,4))
+
+
+# pass function as an argument
+def func1(a, b):
+    return a+b
+
+def func2(func1, a, b):
+    return 6+func1(a, b)
+
+print(func2(func1, 2, 3))
