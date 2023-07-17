@@ -72,3 +72,42 @@ while True:
         break;
     else:
         continue;
+
+
+# works both for while and for loops
+# else executes after loop executes completely
+for i in range(6):
+    print(i)
+else:
+    print("else block")
+
+# else DOES NOT execute 
+# because break did not allow loop to complete completely
+for i in range(6):
+    print(i)
+    if(i == 4):
+        break
+else:
+    print("else block")
+
+
+# short-hand for if else
+a = 40
+b = 405
+print("a") if a > b else print("=") if (a == b) else print("b")
+
+c=10 if (a > b) else 0
+print(c)
+
+# enumerate
+list1 = [5,1,8,3,9]
+for index, value in enumerate(list1):
+    print(index, value)
+print()
+# indexing usually starts with 0 but now indexing will start from 1
+for index, value in enumerate(list1, start=1):
+    print(index, value)
+
+# here item is actually a tuple
+for item in enumerate(list1):
+    print(item)
