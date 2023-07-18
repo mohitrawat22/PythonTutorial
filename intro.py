@@ -71,9 +71,57 @@ d=2.3
 # implicit (smaller data type is converted to higher data type by python)
 print(c+d)
 
-
+'''
 # input from user
 age = input("Enter your age ? ")
 print(age)
 # whatever you give as input, it will always be a STRING
 print(type(age))
+'''
+
+
+# is vs ==
+# is compares the memory location
+# == compares the values
+a = 4
+b = "4"
+
+# location is different
+print(a is b)
+# values are not same
+print(a == b)
+
+a = [1,2,3]
+b = [1,2,3]
+# python will create two lists
+print(a is b)
+# values of both lists are same
+print(a == b)
+
+a = 3
+b = 3
+# 3 is constant, so python will not create another 3
+print(a is b)
+# values are same
+print(a == b)
+
+a = "world"
+b = "world"
+# string is constant, so python will not create another string
+print(a is b)
+# values are same
+print(a == b)
+
+a = (1,2,3)
+b = (1,2,3)
+# tuple is constant, so python will not create another tuple
+print(a is b)
+# values are same
+print(a == b)
+
+a = None
+b = None
+# None is constant, so python will not create another None
+print(a is b)
+# values are same
+print(a == b)
