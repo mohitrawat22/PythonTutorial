@@ -44,6 +44,16 @@ print(str3[-2: -4])
 # index len-4 to len-2
 print(str3[-4: -2])
 
+# index 0 to end with step size of 1
+# means print normal string
+print(str3[::])
+# index 0 to end with step size of 2
+# means print normal string
+print(str3[::2])
+# index end to 0 with step size of 1
+# means print reverse of string
+print(str3[::-1])
+
 
 # string functions
 
