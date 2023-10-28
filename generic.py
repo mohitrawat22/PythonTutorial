@@ -38,27 +38,6 @@ print(obj1.name)
 print(obj1.__len__())
 
 print(obj1)
-
-# requests module
-import requests
-
-url = "https://www.google.com/"
-response = requests.get(url)
-print(response.text)
-
-
-url = "https://jsonplaceholder.typicode.com/posts"
-data = {
-    "title": 'mohit',
-    "body": 'rawat',
-    "id": 22,
-}
-headers = {
-    'Content-type': 'application/json;charset=UTF-8',
-}
-
-response = requests.post(url, headers=headers, json=data)
-print(response.text)
 '''
 
 def my_generator():

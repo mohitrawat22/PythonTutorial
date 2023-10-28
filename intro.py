@@ -127,7 +127,46 @@ print(a is b)
 print(a == b)
 
 
-# 
+# get random number
 import random
 random_num = random.randint(0, 10)
 print(random_num)
+
+
+# scope
+# global scope
+a1 = 'world1'
+
+def func1():
+    # local scope
+    a2 = 'world2'
+
+    if 3 > 2:
+        # there is nothing like block scope
+        a3 = 'world3'
+        print('inside if: ', a3)
+    print('inside func1: ', a2)
+
+    # variable created inside if block can be accessed inside the enclosing function
+    print('inside func1: ', a3)
+
+func1()
+print('Outside func1: ', a1)
+
+# a2 and a3 not accessible outside func1
+# print('Outside func1: ', a2)
+# print('Outside func1: ', a3)
+
+b1 = 2
+
+def func2():
+    # b1 is accessible inside the function but will not change any value
+    # we need to tell python that b1 is somewhere outside in global scope
+    # b1 = 3
+
+    global b1
+    b1 = 3
+
+print(b1)
+func2()
+print(b1)
